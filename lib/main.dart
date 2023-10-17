@@ -66,6 +66,14 @@ class _HomePageState extends State<HomePage> {
                 child: Text('Notify')),
             OutlinedButton(
                 onPressed: () {
+                  notificationService.periodicNotification(
+                      id: 200,
+                      title: "Drink Water",
+                      body: "It has been 1 min since you've not drunk water.");
+                },
+                child: Text('Schedule Notification')),
+            OutlinedButton(
+                onPressed: () {
                   notificationService.scheduleNotification(
                       id: 200,
                       title: "Drink Water",
